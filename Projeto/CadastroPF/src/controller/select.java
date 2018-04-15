@@ -10,10 +10,10 @@ import model.PessoaFisica;
 
 public class select {
 		
-		private Connection conn;		//cria o objeto para a conexao
+		private Connection conn;		
 			
-		public select(Connection conn) {		//metodo construtor que recebe a conexao
-			this.conn = conn;		//faz com que esse objeto local receba a conexao que está sendo usada
+		public select(Connection conn) {		
+			this.conn = conn;		
 		}
 		
 		public int contar() throws SQLException{
