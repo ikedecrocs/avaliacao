@@ -25,7 +25,7 @@ public class PessoaFisica extends JFrame{
 	JLabel nome = new JLabel("NOME: ");
 	
 	JTextField txtEnd = new JTextField();
-	JLabel end = new JLabel("ENDEREÇO: ");
+	JLabel end = new JLabel("ENDEREÃ‡O: ");
 	
 	JTextField txtBairro = new JTextField();
 	JLabel bairro = new JLabel("BAIRRO: ");
@@ -57,8 +57,8 @@ public class PessoaFisica extends JFrame{
 	
 	JLabel sexo = new JLabel("SEXO: ");
 	
-	JRadioButton[] rdbsexo = new JRadioButton[2]; //botão para opçoes
-	ButtonGroup grupo = new ButtonGroup();{ //group impede marcar mais de uma opçao no mesmo objeto
+	JRadioButton[] rdbsexo = new JRadioButton[2]; //botÃ£o para opÃ§oes
+	ButtonGroup grupo = new ButtonGroup();{ //group impede marcar mais de uma opÃ§ao no mesmo objeto
 	
 	rdbsexo[0] = new JRadioButton("Feminino");
 	rdbsexo[1] = new JRadioButton("Masculino");} //fechar chave nos groups
@@ -154,7 +154,7 @@ public class PessoaFisica extends JFrame{
 		sexo.setBounds(335, 15, 55, 30);		
 		grupo.add(rdbsexo[0]); //grupo para o sexo
 		grupo.add(rdbsexo[1]);
-		paine.add(rdbsexo[0]); //opção para o sexo
+		paine.add(rdbsexo[0]); //opÃ§Ã£o para o sexo
 		rdbsexo[0].setBounds(375, 15, 85, 30);
 		paine.add(rdbsexo[1]);
 		rdbsexo[1].setBounds(455, 15, 90, 30);
@@ -205,8 +205,8 @@ public class PessoaFisica extends JFrame{
 				
 				Connection connection = conexao.getConnection();
 				String sql = "insert into pf(nome,endereco,cidade,bairro,telefone,rg,sexo,cep,estado,celular,cpf) values ('"+pessoaFisica.getNome()+"','"+pessoaFisica.getEndereco()+"','"+pessoaFisica.getCidade()+"','"+pessoaFisica.getBairro()+"','"+pessoaFisica.getTelefone()+"','"+pessoaFisica.getRg()+"','"+pessoaFisica.getSexo()+"','"+pessoaFisica.getCep()+"','"+pessoaFisica.getEstado()+"','"+pessoaFisica.getCelular()+"','"+pessoaFisica.getCpf()+"');";
-				PreparedStatement prepareStatement = connection.prepareStatement(sql);		//cria o objeto prepareStatement e dá a ele a string com o comando
-				prepareStatement.executeUpdate();		//executa
+				PreparedStatement prepareStatement = connection.prepareStatement(sql);		
+				prepareStatement.executeUpdate();		
 				prepareStatement.close();
 				}
 				catch (Exception f) {
