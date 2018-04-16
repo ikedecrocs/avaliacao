@@ -205,8 +205,8 @@ public class PessoaFisica extends JFrame{
 				
 				Connection connection = conexao.getConnection();
 				String sql = "insert into pf(nome,endereco,cidade,bairro,telefone,rg,sexo,cep,estado,celular,cpf) values ('"+pessoaFisica.getNome()+"','"+pessoaFisica.getEndereco()+"','"+pessoaFisica.getCidade()+"','"+pessoaFisica.getBairro()+"','"+pessoaFisica.getTelefone()+"','"+pessoaFisica.getRg()+"','"+pessoaFisica.getSexo()+"','"+pessoaFisica.getCep()+"','"+pessoaFisica.getEstado()+"','"+pessoaFisica.getCelular()+"','"+pessoaFisica.getCpf()+"');";
-				PreparedStatement prepareStatement = connection.prepareStatement(sql);		//cria o objeto prepareStatement e dá a ele a string com o comando
-				prepareStatement.executeUpdate();		//executa
+				PreparedStatement prepareStatement = connection.prepareStatement(sql);		
+				prepareStatement.executeUpdate();		
 				prepareStatement.close();
 				}
 				catch (Exception f) {
@@ -226,11 +226,10 @@ public class PessoaFisica extends JFrame{
 				String a[][] = sel.select(contador);
 				for (int d=0; d<contador;d++) {
 					int f = d+1;
-					System.out.println("----------------------"+f+"---------------------- \n");
+					System.out.println("----------------------"+f+"----------------------");
 				for(int i=0; i< 11; i++){
-					System.out.println(a[d][i]+"\n");
+					System.out.println(a[d][i]);
 			    }
-					System.out.println("------------------------------------------------- \n");
 				}
 				}
 				
@@ -243,9 +242,9 @@ public class PessoaFisica extends JFrame{
 		this.setLayout(null);
 		this.setVisible(true);
 		this.setSize(600, 330);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	public static void main(String args[]){
-		PessoaFisica cadpf = new PessoaFisica();
+		PessoaFisica help = new PessoaFisica();
+		help.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 }

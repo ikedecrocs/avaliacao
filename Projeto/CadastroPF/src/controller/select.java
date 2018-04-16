@@ -1,19 +1,16 @@
 package controller;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import model.PessoaFisica;
-
 public class select {
 		
-		private Connection conn;		//cria o objeto para a conexao
+		private Connection conn;		
 			
-		public select(Connection conn) {		//metodo construtor que recebe a conexao
-			this.conn = conn;		//faz com que esse objeto local receba a conexao que está sendo usada
+		public select(Connection conn) {		
+			this.conn = conn;		
 		}
 		
 		public int contar() throws SQLException{
@@ -32,7 +29,6 @@ public class select {
 		public String[][] select(int contador) throws SQLException{
 			int d = 0;
 			String[][] a = new String[contador][11];
-			PessoaFisica pf = new PessoaFisica();
 			String sql = "select nome,endereco,cidade,bairro,telefone,rg,sexo,cep,estado,celular,cpf from pf;";		
 			Statement stmt = conn.createStatement();
 	         ResultSet rs = stmt.executeQuery(sql);
