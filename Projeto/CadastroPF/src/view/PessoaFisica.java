@@ -30,7 +30,7 @@ public class PessoaFisica extends JFrame{
 	JTextField txtBairro = new JTextField();
 	JLabel bairro = new JLabel("BAIRRO: ");
 	
-	JFormattedTextField txtCep = null; //txt formatado
+	JFormattedTextField txtCep = null;
 	JLabel cep = new JLabel("CEP: ");
 	
 	JTextField txtCidade = new JTextField();
